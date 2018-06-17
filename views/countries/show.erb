@@ -1,0 +1,8 @@
+<h1><%= @country.country %></h1>
+<p><%= @country.city %></p>
+<a href="/<%= @country.id %>/edit">edit</a>
+
+<form action="/<%= @country.id %>" method="post">
+  <input type="submit" value="Delete">
+  <input type="hidden" name="_method" value="DELETE">
+</form>

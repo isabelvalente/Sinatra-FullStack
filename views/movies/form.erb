@@ -1,0 +1,18 @@
+<form action="/<%= @movie.id %>" method="POST">
+  <div>
+    <label>Title</label>
+    <input type="text" name="title" placeholder="Enter a movie title" value="<%= @movie.title %>">
+  </div>
+
+  <div>
+    <label>Body</label>
+    <textarea name="city"><%= @movie.city %></textarea>
+  </div>
+
+  <div>
+    <input type="submit" value="Save Post">
+  </div>
+  <% if(@movie.id) %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end %>
+</form>

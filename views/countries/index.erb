@@ -1,0 +1,9 @@
+
+<h1>Welcome to the homepage</h1>
+
+<% @countries.each do |country| %>
+<div>
+  <h3><a href="/<%= country.id %>"><%= country.country %></a></h3>
+  <p><%= country.city %></p>
+</div>
+<% end %>

@@ -1,0 +1,18 @@
+<form action="/<%= @country.id %>" method="POST">
+  <div>
+    <label>Title</label>
+    <input type="text" name="title" placeholder="Enter a country" value="<%= @country.country %>">
+  </div>
+
+  <div>
+    <label>Body</label>
+    <textarea name="city"><%= @country.city %></textarea>
+  </div>
+
+  <div>
+    <input type="submit" value="Save Post">
+  </div>
+  <% if(@country.id) %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end %>
+</form>

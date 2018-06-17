@@ -1,0 +1,8 @@
+<h1>Welcome to Movies</h1>
+
+<% @movies.each do |movie| %>
+<div>
+  <h3><a href="/<%= movie.id %>"><%= movie.genre %></a></h3>
+  <p><%= movie.title %></p>
+</div>
+<% end %>
